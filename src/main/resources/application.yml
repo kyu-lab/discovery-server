@@ -1,12 +1,15 @@
 server:
   port: 8761
+  servlet:
+    context-path: /eureka
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: https://www.writehere.kro.kr/eureka/
   instance:
-    hostname: localhost
+    hostname: www.writehere.kro.kr
+    prefer-ip-address: false
   server:
-    eviction-interval-timer-in-ms: 1000
+    eviction-interval-timer-in-ms: 30000
