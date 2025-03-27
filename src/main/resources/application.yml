@@ -1,13 +1,13 @@
 server:
   port: 8761
   servlet:
-    context-path: /eureka
+    context-path: /discovery
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: https://www.writehere.kro.kr/eureka/
+      defaultZone: https://www.writehere.kro.kr/discovery/
   instance:
     hostname: www.writehere.kro.kr
     prefer-ip-address: false
