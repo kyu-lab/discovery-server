@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: false
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 1200
+  server:
+    eviction-interval-timer-in-ms: 60000
+logging:
+  level:
+    root: WARN
+    com.netflix.discovery: INFO
+    com.netflix.eureka: INFO
+    org.springframework.cloud.netflix.eureka: INFO
